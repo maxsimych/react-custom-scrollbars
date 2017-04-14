@@ -1,6 +1,8 @@
 import raf, { cancel as caf } from 'raf';
 import css from 'dom-css';
-import React, { createClass, PropTypes, cloneElement } from 'react';
+import { Component, createElement, cloneElement } from 'react';
+import PropTypes from 'prop-types';
+
 import isString from '../utils/isString';
 import returnFalse from '../utils/returnFalse';
 import getInnerWidth from '../utils/getInnerWidth';
