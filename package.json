@@ -68,7 +68,7 @@
   },
   "peerDependencies": {
     "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "dependencies": {
     "dom-css": "^2.0.0",
