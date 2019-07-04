@@ -1,6 +1,6 @@
 import raf, { cancel as caf } from 'raf';
 import css from 'dom-css';
-import { Component, createElement, cloneElement } from 'react';
+import React, { Component, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
 import isString from '../utils/isString';
@@ -641,6 +641,15 @@ Scrollbars.propTypes = {
         PropTypes.number,
         PropTypes.string
     ]),
+    autoWidth: PropTypes.bool,
+    autoWidthMin: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+    ]),
+    autoWidthMax: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+    ]),
     universal: PropTypes.bool,
     style: PropTypes.object,
     children: PropTypes.node,
@@ -661,5 +670,8 @@ Scrollbars.defaultProps = {
     autoHeight: false,
     autoHeightMin: 0,
     autoHeightMax: 200,
+    autoWidth: false,
+    autoWidthMin: '100%',
+    autoWidthMax: '100%',
     universal: false,
 };
