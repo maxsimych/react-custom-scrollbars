@@ -418,7 +418,7 @@ export default class Scrollbars extends Component {
         this.hideTracksTimeout = setTimeout(() => {
             css(trackHorizontal, { opacity: 0 });
             css(trackVertical, { opacity: 0 });
-        } autoHideTimeout);
+        }, autoHideTimeout);
     }
 
     detectScrolling() {
@@ -434,7 +434,7 @@ export default class Scrollbars extends Component {
             }
             this.lastViewScrollLeft = this.viewScrollLeft;
             this.lastViewScrollTop = this.viewScrollTop;
-        } 100);
+        }, 100);
     }
 
     raf(callback) {
@@ -588,14 +588,14 @@ export default class Scrollbars extends Component {
                     <div style={viewWrapperStyle} ref="viewWrapper">
                     {cloneElement(
                         renderView({ style: viewWrappedStyle }),
-                        { ref: 'viewWrapped' }
+                        { ref: 'viewWrapped' },
                         children
                     )}
                 </div>
                 </div>
                 {cloneElement(
                     renderTrackHorizontal({ style: trackHorizontalStyle }),
-                    { ref: 'trackHorizontal' }
+                    { ref: 'trackHorizontal' },
                     cloneElement(
                         renderThumbHorizontal({ style: thumbHorizontalStyleDefault }),
                         { ref: 'thumbHorizontal' }
@@ -603,7 +603,7 @@ export default class Scrollbars extends Component {
                 )}
                 {cloneElement(
                     renderTrackVertical({ style: trackVerticalStyle }),
-                    { ref: 'trackVertical' }
+                    { ref: 'trackVertical' },
                     cloneElement(
                         renderThumbVertical({ style: thumbVerticalStyleDefault }),
                         { ref: 'thumbVertical' }
