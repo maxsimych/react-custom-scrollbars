@@ -1,6 +1,6 @@
 import raf, { cancel as caf } from 'raf';
 import css from 'dom-css';
-import React, { Component, cloneElement } from 'react';
+import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
 import isString from '../utils/isString';
@@ -34,7 +34,7 @@ import {
     renderThumbVerticalDefault
 } from './defaultRenderElements';
 
-export default class Scrollbars extends Component {
+export default class Scrollbars extends React.Component {
 
     constructor(props, ...rest) {
       super(props, ...rest);
